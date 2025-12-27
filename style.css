@@ -1,6 +1,14 @@
+:root {
+    --bg-color: #1c1c1c;
+    --item-bg-color: #404040;
+    --text-color: #fefefe;
+    --border-color: #777;
+}
+
 body {
     font-family: sans;
-    background: white;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 #container {
@@ -18,10 +26,10 @@ input[type="checkbox"]
 
 .item {
     display: block;
-    border: 1px solid lightgray;
+    border: 1px solid var(--border-color);
     margin: 2px;
     text-align: center;
-    background: white;
+    background: var(--item-bg-color);
 }
 
 img, .item {
@@ -29,11 +37,11 @@ img, .item {
 }
 
 .item:has(input:checked) {
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 
 p {
-    margin-bottom: 0.1em;
+    margin-bottom: 0.3em;
     margin-top: 0.1em;
     font-size: 9.5px;
 }
