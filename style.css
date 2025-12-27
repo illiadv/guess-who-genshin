@@ -1,12 +1,22 @@
+:root {
+    --bg-color: #1c1c1c;
+    --item-bg-color: #404040;
+    --text-color: #fefefe;
+    --border-color: #777;
+}
+
 body {
     font-family: sans;
-    background: white;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 #container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    max-width: 1200px;
+    margin: auto;
 }
 
 input[type="checkbox"]
@@ -16,17 +26,22 @@ input[type="checkbox"]
 
 .item {
     display: block;
-    border: 1px solid lightgray;
-    margin: 5px;
+    border: 1px solid var(--border-color);
+    margin: 2px;
     text-align: center;
-    max-width: 100px;
-    background: white;
+    background: var(--item-bg-color);
+}
+
+img, .item {
+    max-width: 65px;
 }
 
 .item:has(input:checked) {
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 
 p {
-    margin: 0.1em;
+    margin-bottom: 0.3em;
+    margin-top: 0.1em;
+    font-size: 9.5px;
 }
